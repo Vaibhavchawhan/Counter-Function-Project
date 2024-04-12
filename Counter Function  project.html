@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>counter</title>
+	<style>
+		body{
+			margin-top: 200px;
+			background-image: url("Clock-Hourglass.jpg");
+			background-image: 100%;
+		}
+		#btn{
+			height: 50px;
+			width: 100px;
+			font-size: 40px;
+			background-color:blue;
+			color:white;
+
+			border-radius: 20px;
+
+		}
+		#btnR{
+			height: 50px;
+			width: 200px;
+			background-color:red;
+			font-size: 40px;
+			color: gray;
+			/* transform: (0.9); */
+			transition-duration: 1000;
+			border-radius: 10px;
+		}
+		#count{
+			color: white;
+			font-size: 80px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div align="center">
+		<H1 id="count">0</H1>
+		
+	</div>
+	<div align="center"> 
+		<input type="button" name=" increment" value="+" onclick="ince()" id="btn">
+		<input type="button" name="reset"  value="RESET" onclick="reset()" id="btnR">
+		<input type="button" name="decrement" value="-" onclick="decre()"  id="btn">
+		
+	</div>
+	
+	<script type="text/javascript">
+		var ct=0;
+		let count= document.getElementById('count');
+
+		function ince()
+		{
+		 count.innerHTML=ct++;
+	    }
+
+		function reset()
+		{
+			if(ct>0){
+				ct=0;
+			count.innerHTML=ct;
+		}
+		}
+
+		function decre()
+		 {
+			
+			if(ct>0)
+			{
+				let a= ct--;
+				count.innerHTML=a-1;
+			}
+			
+		}
+	</script>
+</body>
+</html>
